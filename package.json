@@ -14,6 +14,10 @@
   "devDependencies": {
     "concurrently": "^5.1.0"
   },
+  "dependencies": {
+    "apollo-client": "^2.6.10",
+    "graphql": "^15.5.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nguyendinhkhanhha296/MERN-Book-search-engine.git"
