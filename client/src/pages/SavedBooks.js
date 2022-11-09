@@ -7,7 +7,6 @@ import {
   Button,
 } from "react-bootstrap";
 
-import { getMe, deleteBook } from "../utils/API";
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 import { useMutation, useQuery } from "@apollo/react-hooks";
@@ -16,6 +15,7 @@ import { REMOVE_BOOK } from "../utils/mutations";
 
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
+  // eslint-disable-next-line
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
   const userData = data?.me || [];
@@ -30,6 +30,7 @@ const SavedBooks = () => {
 
     try {
       // const response = await deleteBook(bookId, token);
+      // eslint-disable-next-line
       const { data } = await removeBook({
         variables: { bookId },
       });
